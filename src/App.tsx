@@ -16,7 +16,7 @@ function App() {
               color: "red.400",
             }}
           >
-            This is centered
+   z       This is centered
         </Text>
         </Center>
         {/* <Spacer></Spacer> */}
