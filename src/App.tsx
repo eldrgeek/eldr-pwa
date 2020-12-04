@@ -1,25 +1,30 @@
 import React from 'react';
 import logo from './logo.svg';
+import { Flex, Center, Text, Box, Spacer } from "@chakra-ui/react"
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and then save and to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <Flex bg="red.10" align="center">
+    <Flex direction="column" justify="center" align="center"  id="outer" h="100vh" bg="white">
+{/* <Spacer></Spacer> */}
+      {/* <Flex direction="row" justify="center" bg="red.40" > */}
+        <Center bg="blue.300" w="50%" h="50vh" color="white">
+          <Text fontSize="2em"
+            _hover={{
+              bg: "red",
+              color: "red.400",
+            }}
+          >
+            This is centered
+        </Text>
+        </Center>
+        {/* <Spacer></Spacer> */}
+
+      {/* </Flex> */}
+    </Flex>
+    // </Flex>
+
   );
 }
 
