@@ -14,6 +14,7 @@ function App() {
 		console.log('update');
 		setTime(data.value);
 	};
+	const [messsage, setMessage] = React.useState('');
 	React.useEffect(() => {
 		startBackgroundProcess(update);
 	}, []);
@@ -32,15 +33,20 @@ function App() {
 					m={2}
 					p={2}
 					bg="red.200"
-					onClick={() => notifyMe('notification')}
+					onClick={() =>
+						showNotification('notification from here', (data) =>
+							setMessage(data)
+						)
+					}
 				>
-					Notify
+					Notifys
 				</Button>
 				<Button m={2} p={2} bg="red.200" onClick={resetTimer}>
 					Reset
 				</Button>
 			</Flex>
-			{time}
+			{time} <br />
+			{messsage}
 			{/* <Spacer></Spacer> */}
 			{/* <Flex direction="row" justify="center" bg="red.40" > */}
 			<Center bg="blue.300" w="50%" h="50vh" color="white">
@@ -55,7 +61,6 @@ function App() {
 				</Text>
 			</Center>
 			{/* <Spacer></Spacer> */}
-
 			{/* </Flex> */}
 		</Flex>
 		// </Flex>
